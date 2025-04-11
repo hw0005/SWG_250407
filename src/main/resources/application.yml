@@ -17,7 +17,7 @@ spring:
     gateway:
       routes:
         - id: rpsgame
-          uri: http://localhost:8080/
+          uri: lb://rpsgame/
           predicates:
             - Path=/results,/results/**
         - id: leaderboard
